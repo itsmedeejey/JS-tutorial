@@ -52,7 +52,7 @@
 // setTimeout(function () {
 //   console.log("Hello");
 //   setTimeout(function () {
-//     console.log("Hey");
+//     console.log("hey");
 //     setTimeout(function () {
 //       console.log("Namaste");
 //       setTimeout(function () {
@@ -66,20 +66,115 @@
 // }, 2000);
 
 // lets make it in arrow function =>
-setTimeout( ()=> {
-  console.log("Hello");
-  setTimeout( ()=> {
-    console.log("Hey");
-    setTimeout( ()=> {
-      console.log("Namaste");
-      setTimeout( ()=> {
-        console.log("Hi");
-        setTimeout( ()=> {
-          console.log("Bonjour");
-        }, 2000);
-      }, 2000);
-    }, 2000);
-  }, 2000);
-}, 2000);
+// setTimeout( ()=> {
+//   console.log("Hello");
+//   setTimeout( ()=> {
+//     console.log("hey");
+//     setTimeout( ()=> {
+//       console.log("Namaste");
+//       setTimeout( ()=> {
+//         console.log("Hi");
+//         setTimeout( ()=> {
+//           console.log("Bonjour");
+//         }, 2000);
+//       }, 2000);
+//     }, 2000);
+//   }, 2000);
+// }, 2000);
 
-// this is the change i made
+//---------------------------------------------------
+
+//Enhanced object literals, introduced in ECMAScript 6 (ES6), are a set of enhancements to the syntax for defining objects in JavaScripts. These enhancements make it more conevenient and concise to define object properties and methods
+
+
+// function user(name, age, work){
+//   return {
+//    name,
+//    age,
+//    work,
+//    intro: function(){
+//     console.log(`my name is ${name} & i am ${age} years old and i work as a ${work} `)
+//    }
+//   };
+// }
+// const user1 = user("deejey",19,"programmer");
+// const user2 = user("dhanjyoti",19,"webdev");
+// console.log(user1);
+// console.log(user2);
+
+
+// -------------------------------
+// REFACTOR ES5 CODE TO ES6 (Enhanced Object Literals)
+// ES5 code
+// var a = 1,
+//   b = 2,
+//   c = 3;
+// obj = {
+//   a: a,
+//   b: b,
+//   c: c,
+// };
+
+// obj.a = 1, obj.b = 2, obj.c = 3
+
+// REFACTORING ES5 CODE TO ES6
+// const a = 1
+// const b = 2
+// const  c = 3
+
+// obj = {a,b,c,};
+
+// console.log(obj)
+
+
+
+// -------------------------------
+// ES5 code
+// var lib = {
+//   sum: function (a, b) {
+//     return a + b;
+//   },
+//   mult: function (a, b) {
+//     return a * b;
+//   },
+// };
+
+// console.log(lib.sum(2, 3)); // 5
+// console.log(lib.mult(2, 3)); // 6
+// -------------------------------
+// ES6 code
+// const lib={
+//   sum: (a,b) =>  a+b,
+//   mult:(a,b) => a * b
+// };
+// console.log(lib.sum(12,12))
+// console.log(lib.mult(12,12))
+
+
+// -------------------------------
+// function getPersionES5(name, age, height) {
+//   return {
+//     name: name,
+//     age: age,
+//     height: height,
+//   };
+// }
+
+// getPersionES5("Zachary", 23, 195);
+// Expected output: { name: 'Zachary', age: 23, height: 195 }
+// -------------------------------
+
+// -------------------------------
+getPersionES6 = (name, age, height) => {
+  return {
+    name,
+    age,
+    height,
+  };
+};
+console.log(getPersionES6("Zachary", 23, 195));
+// Expected output: { name: 'Zachary', age: 23, height: 195 }
+// -------------------------------
+
+
+//Default funtion parameters, introduced in EMCAScript 6(ES6), allow you to assign default values to function parameters. when a function is called, and an arguement is not provided for parameter, the default values will be used instead. this feature makes it easier to  handle cases where arguments might be missing or underfined.

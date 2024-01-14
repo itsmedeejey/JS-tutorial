@@ -204,14 +204,15 @@
 
 // },3000);
 
-//stop the interval after 10 seconds
-const intervalId = setInterval(function(){
- console.log(`this function is being execuited at the interval`);
+// //stop the interval after 10 seconds
+// const intervalId = setInterval(function(){
+//  console.log(`this function is being execuited at the interval`);
 
-},100);
+// },100);
 
-//stop the interval after 5 seconds
-setTimeout(function(){
-    clearInterval(intervalId)
-    console.log(`Interval stoped`)
-},5000)
+// //stop the interval after 5 seconds
+// setTimeout(function(){
+//     clearInterval(intervalId)
+//     console.log(`Interval stoped`)
+// },5000)
+
