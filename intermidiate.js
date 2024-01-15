@@ -165,16 +165,96 @@
 // -------------------------------
 
 // -------------------------------
-getPersionES6 = (name, age, height) => {
-  return {
-    name,
-    age,
-    height,
-  };
-};
-console.log(getPersionES6("Zachary", 23, 195));
+// getPersionES6 = (name, age, height) => {
+//   return {
+//     name,
+//     age,
+//     height,
+//   };
+// };
+// console.log(getPersionES6("Zachary", 23, 195));
 // Expected output: { name: 'Zachary', age: 23, height: 195 }
 // -------------------------------
 
 
 //Default funtion parameters, introduced in EMCAScript 6(ES6), allow you to assign default values to function parameters. when a function is called, and an arguement is not provided for parameter, the default values will be used instead. this feature makes it easier to  handle cases where arguments might be missing or underfined.
+
+// function countTo5(count ){
+//   if (count == true) {
+//     for (let i = 0; i < 5; i++) {
+//       console.log( `count ${i}`);
+      
+//     }
+//   }
+// }
+// countTo5(true);
+
+// function ratings(rate ){
+//   if(rate == 5){
+//     console.log(`high rating`);
+//   }else if(rate== 0){
+//     console.log(`low ratings`);
+//   }
+// }
+// ratings(1)
+
+// ----------------------------
+// 1. Create function name (multiply) with 2 parameters (a, b) which will multiply the parameters value
+// 2. Provide 1 as the default value to parameter "b"
+
+// function multiply(a, b=1){
+//   return a * b;
+// }
+// console.log(multiply(5,5))
+
+
+// The spread operator is a new addition to the set of operators in JavaScript ES6.
+// It takes in an iterable (e.g an array) and expands it into individual elements.
+// The spread operator is commonly used to make shallow copies of JS objects.
+// Using this operator makes the code concise and enhances its readability.
+
+
+// function giveMe4(a,b,c,d){
+//   console.log("a",a);
+//   console.log("b",b);
+//   console.log("c",c);
+//   console.log("d",d);
+// }
+
+// const colors = ["red", "green", "blue", "yellow"]
+// giveMe4(...colors);
+
+
+// const strNums = ["one" ,"two","three"]
+// const morestrNums = ["four" , "five" , "six"];
+// const concat = [ ...strNums, ...morestrNums];
+
+// console.log(concat)
+
+
+// let peoples = ["deejey", "alex", "jordan"];
+// const allpeps = ["kumar", ...peoples];
+// console.log(allpeps);
+
+
+// const obj1 = {x: 1, y:2}
+// const obj2 = {z: 3}
+// const obj3 = {...obj1, ...obj2}
+// console.log(obj3)
+
+// let arr = [1, 2, 3];
+// let arr2 = [4, 5];
+
+// const cloneArr = [...arr, ...arr2];
+
+// const user = {
+//   name: "deeejey",
+//   age: 19,
+// };
+// const cloneUser = { ...user };
+
+// console.log(cloneUser);
+// console.log(cloneArr);
+
+
+
