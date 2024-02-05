@@ -256,5 +256,223 @@
 // console.log(cloneUser);
 // console.log(cloneArr);
 
+// Destructuring allows us to "upack" values from data-structure (Arrays, Objects) into seprate distinct variables.
+
+// const asd=["one", "two"];
+
+// const [one,two,three]= asd;
+// console.log(one);
+// console.log(two);
+// console.log(three);
+
+// function f(){
+//     return[33,66]
+// }
+// let a,b;
+// [a,b]=f();
+// console.log(a)
+// console.log(b)
+
+//Assigning the rest of an array to a variable
+// const[a, ...b]= ['one', 'two','three'];
+// console.log(b);
+
+// exercise
+// const colors = ["red", "yellow", "blue","green"];
+// const [color1, color2, color3]= colors;
+// console.log(color1, color2, color3)
+
+//In object destructing order doesnt matter but the name does matter
+
+// const student = {name: "deejey", position:"001", rollno: 16}
+// const {name}=student;
+// const {position}=student;
+// console.log(name);
+// console.log(position)
 
 
+// const person= {
+//     name: "james",
+//     age: 90,
+//     gender: "Male",
+//     country: "INDIA",
+// }
+// const{name,age,country}=person;
+// console.log(name);
+// console.log(age);
+// console.log(country);
+
+
+
+// //renaming tag in object 
+// const num = {x: 100, y:200};
+// const {x:new1,y:new2}=num;
+// console.log(new1)
+// console.log(new2)
+
+// //obect destructuring and rest opearator
+// let {a, b , ...rest } = {a:109 , b:213 , c:1231 ,d:213};
+// console.log(rest)
+
+
+//Destructig in functions
+// const person={
+//     name:"deejey",
+//     age:"20",
+//     country:"india",
+// }
+// function printPersonInfo({name, age , country}){
+//     console.log (`name: ${name}`)
+//     console.log (`age: ${age}`)
+//     console.log (`country:${country}`)
+// }
+// printPersonInfo(person);
+
+
+//nested detructing
+// const songs = [
+//   { name: "Lucky You", singer: "Joyner", duration: 4.34 },
+//   { name: "Just Like You", singer: "NF", duration: 3.23 },
+//   { name: "Humble", singer: "Kendrick Lamar", duration: 2.33 },
+//   { name: "Old Town Road", singer: "Lil Nas X", duration: 1.43 },
+//   { name: "Cold Shoulder", singer: "Central Cee", duration: 5.23 },
+// ];
+
+// // const [, , { singer }] = songs;
+// const [, , { singer: s }] = songs;
+// console.log(s);
+
+
+// const data = {
+//     user: {
+//       id: 123,
+//       name: "John Doe",
+//       age: 30,
+//       email: "john.doe@example.com",
+//       address: {
+//         city: "New York",
+//         country: "USA",
+//       },
+//       hobbies: ["Reading", "Painting", "Cooking"],
+//       scores: {
+//         math: 95,
+//         science: 88,
+//         history: 75,
+//       },
+//     },
+//     products: [
+//       { id: 1, name: "Laptop", price: 1000 },
+//       { id: 2, name: "Phone", price: 800 },
+//       { id: 3, name: "Tablet", price: 500 },
+//     ],
+//     settings: {
+//       darkMode: true,
+//       notifications: {
+//         email: true,
+//         sms: false,
+//         push: true,
+//       },
+//       language: "English",
+//     },
+//   };
+  
+
+// // Extracting data using object destructuring
+// const {
+//   user: {
+//     name,
+//     age,
+//     address: { city, country },
+//     hobbies,
+//     scores: { math, science, history },
+//     email,
+//   },
+//   products: [product1, product2, product3],
+//   settings: {
+//     darkMode,
+//     notifications: {
+//       email: emailNotifications,
+//       sms: smsNotifications,
+//       push: pushNotifications,
+//     },
+//     language,
+//   },
+// } = data;
+
+// // Logging the extracted data using template literals
+// console.log(`Name: ${name}`);
+// console.log(`Age: ${age}`);
+// console.log(`Address: ${city}, ${country}`);
+// console.log(`Hobbies: ${hobbies.join(", ")}`);
+// console.log(`Math Score: ${math}`);
+// console.log(`Science Score: ${science}`);
+// console.log(`History Score: ${history}`);
+// console.log(`Product 1: ${product1.name} - $${product1.price}`);
+// console.log(`Product 2: ${product2.name} - $${product2.price}`);
+// console.log(`Product 3: ${product3.name} - $${product3.price}`);
+// console.log(`Dark Mode: ${darkMode}`);
+// console.log(`Email Notifications: ${emailNotifications}`);
+// console.log(`SMS Notifications: ${smsNotifications}`);
+// console.log(`Push Notifications: ${pushNotifications}`);
+// console.log(`Language: ${language}`);
+
+
+
+// The ternary operator in JavaScript is a concise way of writing conditional expressions. It is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), an expression to execute if the condition is true, followed by a colon (:), and an expression to execute if the condition is false.
+
+// condition ? exprIfTrue : exprIfFalse;
+
+// ------------------------------------
+
+// let password =8;
+
+// function passwordChecker(ps){
+//     // if (ps==8){
+//     //     return `strong password`;
+//     // }
+//     // else{
+//     //     return `password should be 8 characters`;
+//     // }
+// return ps === 8 ? `strong password`: "password should be 8 charecters.";
+
+// }
+// const res = passwordChecker(password);
+// console.log(res)
+
+
+// const age = 1;
+// const isAdult = age>= 18? "Adult": "not an adult";
+// console.log(isAdult);
+
+
+// const money = true;
+// const haveMoney = money === true ? "buy Products":"bring money";
+// console.log(haveMoney)
+
+
+//  the "for...in" loop in javascript is used to iterate over the enumerable properties of an object. it is a way to loop through the keys (property names) of an object. for (let key in object) {...}
+//   Here, variable is a variable that will represent each property name (key) during each iteration, and object is the object being looped through.
+
+
+// let person = {
+//     name: "deejey",
+//     age: 20,
+//     gender:"male"
+// };
+
+// for (let keys in person){
+//     console.log(keys, person[keys]);
+// }
+
+
+
+// let  list = [ 'one', 'two ', 'three', 'four'];
+// for (let index in list){
+//     console.log(`${index}:${list[index]}`)
+// }
+
+
+const obect = { a:1, b:2 , c:22};
+for (const properties in obect){
+    console.log(`${properties}: ${obect[properties]}`)
+}

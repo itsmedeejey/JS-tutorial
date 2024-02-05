@@ -1,1 +1,1 @@
-deeejey
+// const [, , { singer }] = songs;
